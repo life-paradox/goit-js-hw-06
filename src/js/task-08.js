@@ -15,7 +15,7 @@ function onSubmitForm(event) {
   const formData = { email, password };
   console.log(formData);
 
-  // Второй способ
+  //!  Второй способ
   // const formData = new FormData(event.currentTarget)
   // formData.forEach((value, name) =>{
   //     formInfo[name] = value != 0? value : alert(isEmpty);
