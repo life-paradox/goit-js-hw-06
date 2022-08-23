@@ -13,14 +13,9 @@ function onSubmitForm(event) {
   const email = mailValue != 0 ? mailValue : alert(isEmpty);
   const password = passValue != 0 ? passValue : alert(isEmpty);
   const formData = { email, password };
-  console.log(formData);
 
-  //!  Второй способ
-  // const formData = new FormData(event.currentTarget)
-  // formData.forEach((value, name) =>{
-  //     formInfo[name] = value != 0? value : alert(isEmpty);
-  // })
-  // console.log(formInfo)
-
-  event.target.reset();
+  if (Object.values(formData).every(element => element !== undefined)) {
+    console.log(formData);
+    event.target.reset();
+  }
 }
