@@ -17,6 +17,7 @@ const list = document.querySelector('.gallery');
 
 const items = images.map(option => {
   const listItem = document.createElement(`li`);
+  listItem.classList.add('gallery__item');
   listItem.insertAdjacentHTML(
     'beforeend',
     `<img class='gallery__item' src='${option.url}' alt='${option.alt}'></img>`
